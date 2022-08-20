@@ -78,11 +78,16 @@ class SuperAutoPetsEnv(gym.Env):
         self.reset()
 
     def step(self, action):
-        self.resolve_action(action)
-
-        obs = self._encode_state()
-        reward = self.get_reward()
-        done = self.is_done()
+        # try n times, if fails 5 times, something is obviously wrong, and training should be stopped.
+        for i in range(5):
+            try:
+                self.resolve_action(action)
+                obs = self._encode_state()
+                reward = self.get_reward()
+                done = self.is_done()
+                break  # can only get to this point, if no errors occurred
+            except Exception as e:
+                print("An exception occured in the step. Trying again. Error was:", e)
         info = dict()
 
         return obs, reward, done, info

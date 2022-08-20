@@ -87,7 +87,7 @@ class SuperAutoPetsEnv(gym.Env):
                 done = self.is_done()
                 break  # can only get to this point, if no errors occurred
             except Exception as e:
-                print("An exception occured in the step. Trying again. Error was:", e)
+                print("An exception occurred in the step. Trying again. Error was:", e)
         info = dict()
 
         return obs, reward, done, info

@@ -5,7 +5,7 @@ setup(
       version='0.1.0',
       packages=find_packages(),
       install_requires=[
-          "sapai @ git+https://github.com/manny405/sapai.git@main",
+          "sapai @ git+https://github.com/andreped/sapai.git@main",
           "gym~=0.21.0",
           "sklearn"
       ]

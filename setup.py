@@ -6,7 +6,7 @@ setup(
       packages=find_packages(),
       install_requires=[
           "sapai @ git+https://github.com/andreped/sapai.git@update-stats",
-          "gym~=0.21.0",
+          "gym~=0.25.2",
           "scikit-learn"
       ]
 )

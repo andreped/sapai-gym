@@ -6,7 +6,7 @@ setup(
       packages=find_packages(),
       install_requires=[
           "sapai @ git+https://github.com/andreped/sapai.git@update-stats",
-          "gym~=0.21",
+          "https://github.com/andreped/gym/releases/download/v0.21.0-binary/gym-0.21.0-py3-none-any.whl",
           "scikit-learn"
       ]
 )
